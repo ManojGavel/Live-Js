@@ -12,8 +12,8 @@ import { v1 as generateGUID } from 'uuid';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const fetchTokenResponse = async ()=> {
   const response = await fetch('/token?scope=voip');
-  console.log(response,'<---------fetch token response')
   if (response.ok) {
+    console.log( await response.json(),'<---------fetch token response')
     const responseAsJson = await response.json();
     const token = responseAsJson.token;
     if (token) {

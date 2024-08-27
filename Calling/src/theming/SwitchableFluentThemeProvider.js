@@ -67,7 +67,7 @@ export const SwitchableFluentThemeProvider = (props) => {
   const [currentTheme, _setCurrentTheme] = useState(initialTheme);
   const [currentRtl, _setCurrentRtl] = useState(false);
 
-  const state = useMemo<SwitchableFluentThemeContext>(
+  const state = useMemo(
     () => ({
       currentTheme,
       setCurrentTheme: (namedTheme) => {
